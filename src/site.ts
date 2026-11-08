@@ -3,8 +3,8 @@
 
 export const site = {
   name: 'Chuan City',
-  cuisine: 'Chinese & Thai',
-  tagline: 'Classic Chinese favourites and bold Sichuan specialties, cooked fresh in Walkinstown.',
+  cuisine: 'Chinese',
+  tagline: 'Classic Chinese cooking, fresh from the wok, in the heart of Walkinstown.',
 
   phoneDisplay: '01 450 9032',
   phoneHref: 'tel:+35314509032',
@@ -64,8 +64,8 @@ export const photos = {
 
 // Categories only: dishes and prices live in the online ordering menu.
 export const dishes: { name: string; note: string; photo: Photo }[] = [
-  { name: 'Sichuan specialties', note: 'Numbing peppercorn, chilli oil and real heat.', photo: { label: 'Sichuan dish', hint: 'A Sichuan chilli dish' } },
+  { name: 'Starters & soups', note: 'Spring rolls, chicken balls and soups to start.', photo: { label: 'Starters', hint: 'A spread of Chinese starters' } },
   { name: 'Chinese classics', note: 'Sweet and sour chicken, curries and all the favourites.', photo: { label: 'Classic dish', hint: 'Sweet and sour chicken with egg fried rice' } },
-  { name: 'Thai kitchen', note: 'Fragrant curries and wok-fried noodles.', photo: { label: 'Thai dish', hint: 'A Thai curry or noodle dish' } },
+  { name: 'Noodles & rice', note: 'Chow mein, fried rice and wok-tossed noodles.', photo: { label: 'Noodles & rice', hint: 'Chow mein or special fried rice' } },
   { name: 'Set meals', note: 'Good-value combos for one, two or the whole house.', photo: { label: 'Set meal', hint: 'A set meal laid out for two' } }
 ];

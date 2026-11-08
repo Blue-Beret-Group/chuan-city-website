@@ -74,7 +74,7 @@ export default function Home() {
             <div className="section-head">
               <p className="eyebrow">From the kitchen</p>
               <h2>Something for every table</h2>
-              <p>From the takeaway classics you grew up on to the real heat of Sichuan cooking. The full menu, with prices, is on our ordering page and in the app.</p>
+              <p>All the Chinese takeaway classics you grew up on, cooked fresh to order. The full menu, with prices, is on our ordering page and in the app.</p>
             </div>
             <div className="dish-grid">
               {dishes.map((dish) => (
