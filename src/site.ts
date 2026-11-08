@@ -3,7 +3,6 @@
 
 export const site = {
   name: 'Chuan City',
-  chineseName: '蜀都',
   cuisine: 'Chinese & Thai',
   tagline: 'Classic Chinese favourites and bold Sichuan specialties, cooked fresh in Walkinstown.',
 
@@ -27,8 +26,7 @@ export const site = {
     privacy: 'https://www.chuancityrestaurant.ie/linkPage?page=privacy',
     help: 'https://www.chuancityrestaurant.ie/help',
     everDish: 'https://www.everdish.ie/',
-    // The current site's Facebook icon has no link. Add the page URL here to show it.
-    facebook: ''
+    facebook: 'https://www.facebook.com/chauncity/'
   },
 
   delivery: {

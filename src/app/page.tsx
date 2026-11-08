@@ -10,12 +10,8 @@ const nav = [
   { href: '#find-us', label: 'Find us' }
 ];
 
-function Seal({ className = '' }: { className?: string }) {
-  return (
-    <span className={`seal ${className}`} aria-hidden="true">
-      {[...site.chineseName].map((char) => <span key={char}>{char}</span>)}
-    </span>
-  );
+function Logo({ className = '' }: { className?: string }) {
+  return <img className={`logo ${className}`} src="/logo.png" alt="" width={320} height={320} />;
 }
 
 function PhoneIcon() {
@@ -33,7 +29,7 @@ export default function Home() {
       <header className="site-header">
         <div className="wrap header-inner">
           <a href="#top" className="brand" aria-label={`${site.name} home`}>
-            <Seal />
+            <Logo />
             <span className="brand-name">{site.name}</span>
           </a>
           <nav aria-label="Main">
@@ -52,7 +48,7 @@ export default function Home() {
             <div className="hero-copy">
               <p className="eyebrow">{site.cuisine} · Walkinstown, Dublin 12</p>
               <h1>
-                <Seal className="seal-large" />
+                <Logo className="logo-large" />
                 {site.name}
               </h1>
               <p className="lede">{site.tagline}</p>
@@ -184,7 +180,10 @@ export default function Home() {
                 <a className="btn btn-primary btn-block" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get directions</a>
                 <a className="btn btn-ghost btn-block" href={mapUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
               </div>
-              <p className="muted">Feedback on your order? Call us, or leave a review on our Google listing.</p>
+              <p className="muted">
+                Feedback on your order? Call us, leave a review on our Google listing
+                {site.links.facebook && <>, or message us on <a href={site.links.facebook} target="_blank" rel="noopener noreferrer">Facebook</a></>}.
+              </p>
             </div>
           </div>
         </section>
@@ -193,7 +192,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="wrap footer-inner">
           <div className="brand">
-            <Seal />
+            <Logo />
             <span className="brand-name">{site.name}</span>
           </div>
           <nav aria-label="Footer">
