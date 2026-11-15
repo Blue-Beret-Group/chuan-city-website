@@ -14,6 +14,10 @@ npm run build   # static export to out/
 
 Everything the restaurant might change lives in `src/site.ts`: phone, address, opening hours, delivery times, and the ordering, app and footer links.
 
+## Menus
+
+The takeaway and dine-in menus are PDFs in `public/menus/`. To update one, replace the file and keep its name (`chuan-city-takeaway-menu.pdf` or `chuan-city-dine-in-menu.pdf`). Their labels are in `menus` in `src/site.ts`.
+
 ## Adding photos
 
 Every photo on the page is a labelled placeholder until a real one is added:

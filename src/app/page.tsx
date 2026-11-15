@@ -1,4 +1,4 @@
-import { site, photos, dishes, mapEmbedUrl, mapUrl, directionsUrl } from '@/site';
+import { site, photos, dishes, menus, mapEmbedUrl, mapUrl, directionsUrl } from '@/site';
 import { PhotoSlot } from '@/components/PhotoSlot';
 import { AppButtons } from '@/components/AppButtons';
 import { HoursTable } from '@/components/HoursTable';
@@ -12,6 +12,14 @@ const nav = [
 
 function Logo({ className = '' }: { className?: string }) {
   return <img className={`logo ${className}`} src="/logo.png" alt="" width={320} height={320} />;
+}
+
+function MenuIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
+      <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" d="M6 3h9l4 4v14H6zM15 3v4h4M9 11h7M9 15h7M9 19h4" />
+    </svg>
+  );
 }
 
 function PhoneIcon() {
@@ -54,6 +62,7 @@ export default function Home() {
               <p className="lede">{site.tagline}</p>
               <div className="cta-row">
                 <a className="btn btn-primary" href={site.links.orderOnline}>Order online</a>
+                <a className="btn btn-ghost" href="#menu"><MenuIcon />View menus</a>
                 <a className="btn btn-ghost" href={site.phoneHref}><PhoneIcon />Call {site.phoneDisplay}</a>
               </div>
               <AppButtons />
@@ -74,7 +83,19 @@ export default function Home() {
             <div className="section-head">
               <p className="eyebrow">From the kitchen</p>
               <h2>Something for every table</h2>
-              <p>All the Chinese takeaway classics you grew up on, cooked fresh to order. The full menu, with prices, is on our ordering page and in the app.</p>
+              <p>All the Chinese takeaway classics you grew up on, cooked fresh to order. Takeaway and dine-in prices are different, so pick the menu you need.</p>
+            </div>
+            <div className="menu-picker">
+              {menus.map((menu) => (
+                <a key={menu.href} className="menu-card" href={menu.href} target="_blank" rel="noopener">
+                  <span className="menu-card-icon"><MenuIcon /></span>
+                  <span className="menu-card-text">
+                    <strong>{menu.name}</strong>
+                    <span>{menu.note}</span>
+                  </span>
+                  <span className="menu-card-cta">Open PDF</span>
+                </a>
+              ))}
             </div>
             <div className="dish-grid">
               {dishes.map((dish) => (
@@ -86,7 +107,7 @@ export default function Home() {
               ))}
             </div>
             <div className="center">
-              <a className="btn btn-primary" href={site.links.orderOnline}>See the full menu &amp; order</a>
+              <a className="btn btn-primary" href={site.links.orderOnline}>Order online</a>
             </div>
           </div>
         </section>
@@ -115,7 +136,7 @@ export default function Home() {
             <div className="section-head">
               <p className="eyebrow">Parties &amp; groups</p>
               <h2>Bring everyone</h2>
-              <p>Birthdays, work dos, family get-togethers. We’ll set the table and keep the dishes coming. Call us to book a table for your group.</p>
+              <p>Birthdays, Christmas, christenings, communions, confirmations and parties of all sizes. Book a table for your group, or let our house party catering service bring the food to you. Call us to plan it.</p>
             </div>
             <div className="party-grid">
               <PhotoSlot photo={photos.partyTable} className="party-main" />

@@ -44,6 +44,20 @@ export const site = {
   ]
 };
 
+// The printed menus, served from public/menus/. Takeaway and dine-in prices differ.
+export const menus = [
+  {
+    name: 'Takeaway menu',
+    note: 'Collection & delivery prices, set dinners and meal deals',
+    href: '/menus/chuan-city-takeaway-menu.pdf'
+  },
+  {
+    name: 'Dine-in menu',
+    note: 'Prices for eating in at our restaurant',
+    href: '/menus/chuan-city-dine-in-menu.pdf'
+  }
+];
+
 const query = encodeURIComponent(`Chuan City, ${site.address.oneLine}`);
 export const mapEmbedUrl = `https://www.google.com/maps?q=${query}&ll=${site.coords.lat},${site.coords.lng}&z=16&output=embed`;
 export const mapUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
