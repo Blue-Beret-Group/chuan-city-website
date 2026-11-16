@@ -71,10 +71,3 @@ export const photos = {
   hero: { label: 'Hero photo', hint: 'A signature dish shot close up, steam rising, dark background' },
 } satisfies Record<string, Photo>;
 
-// Categories only: dishes and prices live in the online ordering menu.
-export const dishes: { name: string; note: string; photo: Photo }[] = [
-  { name: 'Starters & soups', note: 'Spring rolls, chicken balls and soups to start.', photo: { label: 'Starters', hint: 'A spread of Chinese starters' } },
-  { name: 'Chinese classics', note: 'Sweet and sour chicken, curries and all the favourites.', photo: { label: 'Classic dish', hint: 'Sweet and sour chicken with egg fried rice' } },
-  { name: 'Noodles & rice', note: 'Chow mein, fried rice and wok-tossed noodles.', photo: { label: 'Noodles & rice', hint: 'Chow mein or special fried rice' } },
-  { name: 'Set meals', note: 'Good-value combos for one, two or the whole house.', photo: { label: 'Set meal', hint: 'A set meal laid out for two' } }
-];

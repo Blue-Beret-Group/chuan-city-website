@@ -20,12 +20,12 @@ The takeaway and dine-in menus are PDFs in `public/menus/`. To update one, repla
 
 ## Adding photos
 
-Every photo on the page is a labelled placeholder until a real one is added:
+The photo at the top of the page is a labelled placeholder until a real one is added:
 
 1. Put the image in `public/photos/` (for example `dining-room.jpg`).
-2. In `src/site.ts`, add `src: '/photos/dining-room.jpg'` to the matching entry in `photos` or `dishes`.
+2. In `src/site.ts`, add `src: '/photos/dining-room.jpg'` to the matching entry in `photos`.
 
-Each placeholder shows the shot it expects (the hero dish and one per menu category).
+The placeholder shows the shot it expects (a signature dish, close up).
 
 ## Online ordering
 

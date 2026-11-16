@@ -1,4 +1,4 @@
-import { site, photos, dishes, menus, mapEmbedUrl, mapUrl, directionsUrl } from '@/site';
+import { site, photos, menus, mapEmbedUrl, mapUrl, directionsUrl } from '@/site';
 import { PhotoSlot } from '@/components/PhotoSlot';
 import { AppButtons } from '@/components/AppButtons';
 import { HoursTable } from '@/components/HoursTable';
@@ -58,7 +58,6 @@ export default function Home() {
                 <Logo className="logo-large" />
                 {site.name}
               </h1>
-              <p className="lede">{site.tagline}</p>
               <div className="cta-row">
                 <a className="btn btn-primary" href={site.links.orderOnline}>Order online</a>
                 <a className="btn btn-ghost" href="#menu"><MenuIcon />View menus</a>
@@ -73,9 +72,7 @@ export default function Home() {
         <section id="menu" className="section">
           <div className="wrap">
             <div className="section-head">
-              <p className="eyebrow">From the kitchen</p>
-              <h2>Something for every table</h2>
-              <p>All the Chinese takeaway classics you grew up on, cooked fresh to order. Takeaway and dine-in prices are different, so pick the menu you need.</p>
+              <h2>See our menu</h2>
             </div>
             <div className="menu-picker">
               {menus.map((menu) => (
@@ -89,29 +86,9 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            <div className="dish-grid">
-              {dishes.map((dish) => (
-                <article key={dish.name} className="dish">
-                  <PhotoSlot photo={dish.photo} />
-                  <h3>{dish.name}</h3>
-                  <p>{dish.note}</p>
-                </article>
-              ))}
-            </div>
             <div className="center">
               <a className="btn btn-primary" href={site.links.orderOnline}>Order online</a>
             </div>
-          </div>
-        </section>
-
-        <section className="app-band">
-          <div className="wrap app-inner">
-            <div>
-              <p className="eyebrow">Order on the go</p>
-              <h2>Get the app</h2>
-              <p>Browse the menu and order your favourites in a few taps.</p>
-            </div>
-            <AppButtons />
           </div>
         </section>
 
@@ -161,6 +138,17 @@ export default function Home() {
                 {site.links.facebook && <>, or message us on <a href={site.links.facebook} target="_blank" rel="noopener noreferrer">Facebook</a></>}.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="app-band">
+          <div className="wrap app-inner">
+            <div>
+              <p className="eyebrow">Order on the go</p>
+              <h2>Get the app</h2>
+              <p>Browse the menu and order your favourites in a few taps.</p>
+            </div>
+            <AppButtons />
           </div>
         </section>
       </main>
