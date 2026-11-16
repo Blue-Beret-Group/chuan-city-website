@@ -25,7 +25,7 @@ Every photo on the page is a labelled placeholder until a real one is added:
 1. Put the image in `public/photos/` (for example `dining-room.jpg`).
 2. In `src/site.ts`, add `src: '/photos/dining-room.jpg'` to the matching entry in `photos` or `dishes`.
 
-Each placeholder shows the shot it expects (hero dish, dining room, kitchen, party table, celebrations, banquet spread and one per menu category).
+Each placeholder shows the shot it expects (the hero dish and one per menu category).
 
 ## Online ordering
 

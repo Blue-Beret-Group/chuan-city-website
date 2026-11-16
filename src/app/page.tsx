@@ -5,7 +5,6 @@ import { HoursTable } from '@/components/HoursTable';
 
 const nav = [
   { href: '#menu', label: 'Menu' },
-  { href: '#parties', label: 'Parties' },
   { href: '#hours', label: 'Hours' },
   { href: '#find-us', label: 'Find us' }
 ];
@@ -69,13 +68,6 @@ export default function Home() {
             </div>
             <PhotoSlot photo={photos.hero} className="hero-photo" />
           </div>
-          <div className="wrap">
-            <ul className="facts">
-              <li><span>Delivery</span>{site.delivery.deliveryTime}</li>
-              <li><span>Collection</span>{site.delivery.collectionTime}</li>
-              <li><span>{site.delivery.fee}</span>{site.delivery.minimum}</li>
-            </ul>
-          </div>
         </section>
 
         <section id="menu" className="section">
@@ -108,43 +100,6 @@ export default function Home() {
             </div>
             <div className="center">
               <a className="btn btn-primary" href={site.links.orderOnline}>Order online</a>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-alt">
-          <div className="wrap split">
-            <div className="photo-pair">
-              <PhotoSlot photo={photos.diningRoom} />
-              <PhotoSlot photo={photos.kitchen} />
-            </div>
-            <div>
-              <p className="eyebrow">Eat in, collect or delivered</p>
-              <h2>Your local on Long Mile Road</h2>
-              <p>Pull up a chair in our dining room, call ahead and collect, or have it brought to your door. However you like it, every dish comes straight from the wok.</p>
-              <ul className="ticks">
-                <li>{site.delivery.fee}</li>
-                <li>{site.delivery.minimum}</li>
-                <li>Order online, in the app or by phone</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="parties" className="section">
-          <div className="wrap">
-            <div className="section-head">
-              <p className="eyebrow">Parties &amp; groups</p>
-              <h2>Bring everyone</h2>
-              <p>Birthdays, Christmas, christenings, communions, confirmations and parties of all sizes. Book a table for your group, or let our house party catering service bring the food to you. Call us to plan it.</p>
-            </div>
-            <div className="party-grid">
-              <PhotoSlot photo={photos.partyTable} className="party-main" />
-              <PhotoSlot photo={photos.partyGuests} />
-              <PhotoSlot photo={photos.partySpread} />
-            </div>
-            <div className="center">
-              <a className="btn btn-primary" href={site.phoneHref}><PhoneIcon />Book on {site.phoneDisplay}</a>
             </div>
           </div>
         </section>

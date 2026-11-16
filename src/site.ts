@@ -69,11 +69,6 @@ export type Photo = { label: string; hint: string; src?: string };
 
 export const photos = {
   hero: { label: 'Hero photo', hint: 'A signature dish shot close up, steam rising, dark background' },
-  diningRoom: { label: 'Dining room', hint: 'The first-floor dining room, tables set' },
-  kitchen: { label: 'In the kitchen', hint: 'Chef at the wok, flames up' },
-  partyTable: { label: 'Party table', hint: 'A long table set for a group celebration' },
-  partyGuests: { label: 'Celebrations', hint: 'Guests raising a toast at a birthday or work party' },
-  partySpread: { label: 'Banquet spread', hint: 'Sharing platters laid out for a group' }
 } satisfies Record<string, Photo>;
 
 // Categories only: dishes and prices live in the online ordering menu.
